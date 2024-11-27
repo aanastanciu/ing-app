@@ -4,9 +4,31 @@
   "description": "Frontend Dev assignment @ ING Hubs",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "lite-server": "^2.6.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
+  "dependencies": {
+    "@lion/button": "^0.18.1",
+    "@lion/core": "^0.24.0",
+    "@lion/form": "^0.15.0",
+    "@lion/input": "^0.18.0",
+    "@lion/ui": "^0.8.7",
+    "define.js": "^0.1.0",
+    "lit": "^3.2.1"
+  }
 }

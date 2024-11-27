@@ -1,0 +1,54 @@
+@import '../styles/styles.css';
+
+
+
+lion-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 100%;
+    border: 1px solid rgb(219, 219, 219);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.lion-btn {
+    background-color: rgb(255, 98, 0);
+    border: 2px solid rgb(255, 98, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lion-btn:hover {
+    background-color: rgb(255, 120, 40);
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 120, 40);
+}
+
+.lion-btn:active {
+    background-color: rgb(220, 80, 0);
+    border-color: rgb(220, 80, 0);
+    transform: scale(0.98);
+}
+
+lion-input {
+
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.015rem;
+    font-weight: 400;
+    color: rgb(103, 103, 103);
+
+}
