@@ -1,4 +1,4 @@
-export const users = [
+const users = [
     {
         id: 1,
         name: "John Doe",
@@ -243,3 +243,6 @@ export const users = [
         createdAt: "2024-09-01T10:00:00Z",
     },
 ];
+
+
+export default users;

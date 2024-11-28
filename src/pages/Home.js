@@ -2,13 +2,15 @@ import { html } from 'lit-html';
 import '@lion/form';
 import '@lion/ui/define/lion-pagination.js';
 import '../styles/home.css';
-import { users } from "../utils/userDetails"
+import users from "../utils/userDetails"
 import NavPage from './NavPage';
+import { navigateTo } from '../index';
 
 
 
 let currentPage = 1;
 const usersPerPage = 5;
+let userData = [];
 
 
 const getUsersForCurrentPage = () => {
@@ -23,18 +25,26 @@ const fetchUsers = () => {
   try {
     setTimeout(() => {
       userData = users;
-      console.log('Fetched Users:', userData);
+      console.log('Fetched Users:', users);
     }, 1000);
   } catch (error) {
-    console.error('Error fetching users:', error);
+    reject('Error fetching users:', error);
   }
+
 };
 
 
 
+const handleRowClick = (id) => {
+  navigateTo(`/user-details/${id}`);
+
+};
+
 
 const Home = () => {
   const user = JSON.parse(localStorage.getItem('user')) || {};
+  fetchUsers();
+
   return html`
   ${NavPage()} 
  
@@ -54,7 +64,7 @@ const Home = () => {
     <tbody>
       ${users.map(
     (user) => html`
-          <tr>
+          <tr @click="${() => handleRowClick(user.id)}">
             <td>${user.id}</td>
             <td>${user.name}</td>
             <td>${user.email}</td>
@@ -65,11 +75,10 @@ const Home = () => {
     </tbody>
   </table>
   <lion-pagination
-  .totalItems="${users.length}"
-  .itemsPerPage="${usersPerPage}"
-  .currentPage="${currentPage}"
- 
-></lion-pagination>
+          .totalItems="${userData.length}"
+          .itemsPerPage="${usersPerPage}"
+          .currentPage="${currentPage}"
+        ></lion-pagination>
 </div>
 `;
 };
