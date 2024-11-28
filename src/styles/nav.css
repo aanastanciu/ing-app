@@ -27,12 +27,15 @@
     font-size: 16px;
 }
 
-.nav-links a {
+.nav-links a,
+span {
+    cursor: pointer;
     text-decoration: none;
     color: #ec5211;
     margin: 0 10px;
 }
 
-.nav-links a:hover {
+.nav-links a,
+span:hover {
     text-decoration: underline;
 }
