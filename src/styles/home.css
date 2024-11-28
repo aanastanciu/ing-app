@@ -1,50 +1,77 @@
-@import '../styles/styles.css';
+ .home-page {
+   text-align: center;
+ }
 
-.login-page,
-.home-page {
-  max-width: 400px;
-  margin: 100px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+ h1 {
+   text-align: center;
+   color: #ef7e4d;
+ }
 
-h1 {
-  text-align: center;
-  color: #333;
-}
+ p {
+   color: #f05a19;
+   font-size: 13px;
+ }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+ form {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
 
-button {
-  background-color: rgb(255, 98, 0);
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+ button {
+   background-color: rgb(255, 98, 0);
+   border: none;
+   color: white;
+   padding: 10px 15px;
+   cursor: pointer;
+   border-radius: 5px;
+ }
 
-button:hover {
-  background-color: rgb(230, 88, 0);
-}
+ button:hover {
+   background-color: rgb(230, 88, 0);
+ }
 
-nav {
-  text-align: right;
-  margin-bottom: 20px;
-}
+ nav {
+   text-align: right;
+   margin-bottom: 20px;
+ }
 
-nav a {
-  color: #0073e6;
-  text-decoration: none;
-  margin-left: 10px;
-}
+ nav a {
+   color: #0073e6;
+   text-decoration: none;
+   margin-left: 10px;
+ }
 
-nav a:hover {
-  text-decoration: underline;
-}
+ nav a:hover {
+   text-decoration: underline;
+ }
+
+
+ .user-table {
+   margin: 20px auto;
+   border-collapse: collapse;
+   text-align: left;
+ }
+
+ .user-table th,
+ .user-table td {
+   border: 1px solid #ddd;
+   padding: 8px;
+ }
+
+ .user-table th {
+   background-color: #f4f4f4;
+   color: #333;
+ }
+
+ .user-table tr:nth-child(even) {
+   background-color: #f9f9f9;
+ }
+
+ .user-table tr {
+   cursor: pointer;
+ }
+
+ .user-table tr:hover {
+   background-color: #f1f1f1;
+ }

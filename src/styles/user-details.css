@@ -1,0 +1,57 @@
+.user-details-page {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.user-details-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+.user-info p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.user-info strong {
+    color: #111;
+}
+
+.content {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.user-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .user-details-page {
+        padding: 15px;
+    }
+
+    .user-info,
+    .user-section {
+        padding: 15px;
+    }
+
+    .user-info p {
+        font-size: 1rem;
+    }
+}
