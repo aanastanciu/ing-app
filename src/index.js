@@ -31,7 +31,8 @@ function renderRoute(path) {
     render(pageComponent(), document.getElementById('app'));
 }
 
-
+const initialRoute = localStorage.getItem('isLoggedIn') === 'true' ? '/home' : '/login';
+navigateTo(initialRoute);
 
 window.addEventListener('popstate', () => {
     renderRoute(window.location.pathname);
