@@ -41,6 +41,11 @@
     justify-content: space-between;
 }
 
+.user-section {
+    width: 20%;
+    height: 20%;
+}
+
 @media (max-width: 768px) {
     .user-details-page {
         padding: 15px;

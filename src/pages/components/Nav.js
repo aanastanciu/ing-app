@@ -1,11 +1,11 @@
 import { html } from 'lit-html';
-import '../styles/nav.css';
+import '../../styles/nav.css';
 
 
 const logoutHandler = () => {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('user');
-    window.history.pushState({}, '', '/login');
+  localStorage.removeItem('isLoggedIn');
+  localStorage.removeItem('user');
+  window.history.pushState({}, '', '/login');
 
 };
 
