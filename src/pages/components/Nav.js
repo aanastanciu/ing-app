@@ -7,7 +7,7 @@ import { navigateTo } from '../../index';
 const logoutHandler = () => {
   localStorage.removeItem('isLoggedIn');
   localStorage.removeItem('user');
-  window.history.pushState({}, '', '/login');
+  navigateTo('/login');
 };
 
 const handleRedirect = () => {
