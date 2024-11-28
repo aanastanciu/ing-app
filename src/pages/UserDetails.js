@@ -1,6 +1,8 @@
 import { html } from 'lit-html';
 import users from '../utils/userDetails';
-import NavPage from './NavPage';
+import Footer from '../pages/components/Footer';
+import Nav from '../pages/components/Nav';
+
 import '@lion/ui/define/lion-collapsible.js';
 import UserAddress from '../pages/components/UserAddress';
 import UserAccount from '../pages/components/UserAccount';
@@ -9,21 +11,21 @@ import '../styles/user-details.css';
 
 
 const getUserById = (id) => {
-    return users.find((user) => user.id === parseInt(id));
+  return users.find((user) => user.id === parseInt(id));
 };
 
 
 const UserDetails = () => {
-    const userId = window.location.pathname.split('/').pop();
-    const user = getUserById(userId);
-    if (!user) {
-        console.log(user)
-        return html`<h2>User not found</h2>`;
-    }
+  const userId = window.location.pathname.split('/').pop();
+  const user = getUserById(userId);
+  if (!user) {
+    console.log(user)
+    return html`<h2>User not found</h2>`;
+  }
 
 
-    return html`
-    ${NavPage()}
+  return html`
+    ${Nav()}
     <div class="user-details-page">
       <h2>User Details</h2>
 
@@ -40,8 +42,8 @@ const UserDetails = () => {
 
     <div class="user-section">
       ${UserAccount({
-        account: user.account
-    })}
+    account: user.account
+  })}
     </div>
 
     <div class="user-section">
@@ -49,6 +51,7 @@ const UserDetails = () => {
     </div>
     </div>
     </div>
+    ${Footer()}
   `;
 };
 
