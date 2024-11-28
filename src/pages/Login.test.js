@@ -15,13 +15,13 @@ describe('Login Page', () => {
     let container;
 
     beforeEach(() => {
-        // Set up a DOM element container for rendering the component
+
         container = document.createElement('div');
         document.body.appendChild(container);
     });
 
     afterEach(() => {
-        // Clean up after each test
+
         jest.clearAllMocks();
         localStorage.clear();
         container.innerHTML = '';
