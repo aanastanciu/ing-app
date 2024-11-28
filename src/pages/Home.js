@@ -3,8 +3,8 @@ import '@lion/form';
 import '@lion/ui/define/lion-pagination.js';
 import '../styles/home.css';
 import users from "../utils/userDetails"
-import Footer from '../pages/components/Footer';
-import Nav from '../pages/components/Nav';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 import { navigateTo } from '../index';
 
 
