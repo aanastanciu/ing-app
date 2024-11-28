@@ -1,12 +1,12 @@
 import { html } from 'lit-html';
 import users from '../utils/userDetails';
-import Footer from '../pages/components/Footer';
-import Nav from '../pages/components/Nav';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 
 import '@lion/ui/define/lion-collapsible.js';
-import UserAddress from '../pages/components/UserAddress';
-import UserAccount from '../pages/components/UserAccount';
-import UserTransaction from '../pages/components/UserTransaction';
+import UserAddress from './components/UserAddress';
+import UserAccount from './components/UserAccount';
+import UserTransaction from './components/UserTransaction';
 import '../styles/user-details.css';
 
 

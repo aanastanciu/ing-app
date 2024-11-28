@@ -24,20 +24,15 @@ const submitHandler = async (ev) => {
   const formData = new FormData(formElement);
   const credentials = Object.fromEntries(formData.entries());
 
-  console.log('Submitted Data:', credentials);
-
   const isValid = await authenticateUser(credentials);
 
   if (isValid) {
     localStorage.setItem('isLoggedIn', 'true');
     localStorage.setItem('user', JSON.stringify(credentials));
-    console.log('Authentication successful!');
     navigateTo('/home');
   } else {
     alert('Invalid email or password. Please try again.');
-
   }
-
 };
 
 
