@@ -1,8 +1,6 @@
-@import '../styles/styles.css';
-
-.login-page,
 .home-page {
-  max-width: 400px;
+  text-align: center;
+  margin: 20px auto;
   margin: 100px auto;
   background: white;
   padding: 20px;
@@ -12,7 +10,12 @@
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #ef7e4d;
+}
+
+p {
+  color: #f05a19;
+  font-size: 13px;
 }
 
 form {
@@ -47,4 +50,30 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+
+.user-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1;
 }

@@ -10,7 +10,7 @@ const authenticateUser = async (credentials) => {
 
   const mockDatabase = {
     emailAddress: 'test@test.com',
-    password: 'plea$eHireM3',
+    password: 'pleaseHireMe',
   };
 
   return (
