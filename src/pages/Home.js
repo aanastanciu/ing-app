@@ -80,6 +80,7 @@ const Home = () => {
   )}
   </tbody>
   </table>
+  <p>Click on any user to see its details!</p>
   <lion-pagination
         .count="${Math.ceil(users.length / usersPerPage)}" 
         .current="${currentPage}" 

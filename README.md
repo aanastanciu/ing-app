@@ -2,6 +2,11 @@
 Frontend Dev assignment @ ING Hubs
 
 
+ ## Credentials
+1. **email: test@test.com**
+2. **password: pleaseHireMe**
+
+
  ## Features
 
 1. **User login with session management**
