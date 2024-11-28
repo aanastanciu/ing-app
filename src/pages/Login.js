@@ -2,7 +2,7 @@ import { html } from 'lit-html';
 import '@lion/ui/define/lion-form.js';
 import '../styles/login.css';
 import '@lion/ui/define/lion-input.js';
-
+import { navigateTo } from '../index';
 
 
 
@@ -32,7 +32,7 @@ const submitHandler = async (ev) => {
     localStorage.setItem('isLoggedIn', 'true');
     localStorage.setItem('user', JSON.stringify(credentials));
     console.log('Authentication successful!');
-    window.location.href = '/home';
+    navigateTo('/home');
   } else {
     alert('Invalid email or password. Please try again.');
 
