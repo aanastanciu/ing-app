@@ -1,23 +1,27 @@
 import { html } from 'lit-html';
 import '../../styles/nav.css';
+import { navigateTo } from '../../index';
+
 
 
 const logoutHandler = () => {
   localStorage.removeItem('isLoggedIn');
   localStorage.removeItem('user');
   window.history.pushState({}, '', '/login');
+};
 
+const handleRedirect = () => {
+  navigateTo('/home');
 };
 
 const NavPage = () => html`
   <nav class="nav-page">
     <div class="logo-container">
-      <img src="../assets/lion-logo.jpg" alt="Lion Logo" class="lion-logo" />
+      <img src="/assets/lion-logo.jpg" alt="Lion Logo" class="lion-logo" />
     </div>
     <div class="nav-links">
-      <a href="/home" id="home-link">Home</a> |
-      <a href="#" id="logout-link" @click="${logoutHandler}">Logout</a>
-
+      <span @click="${handleRedirect}" id="home-link">Home</span> |
+      <span id="logout-link" @click="${logoutHandler}">Logout</span>
     </div>
   </nav>
 `;

@@ -43,6 +43,7 @@
 .footer-link {
     color: #007bff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer-link:hover {
