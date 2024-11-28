@@ -56,7 +56,7 @@ describe('Home Page', () => {
     it('changes the page when pagination is clicked', () => {
 
         const pagination = screen.getByRole('navigation');
-        console.log(screen.debug());
+
         const nextPageButton = pagination.querySelector('.lion-pagination__next');
 
         if (nextPageButton) {
