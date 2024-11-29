@@ -2,7 +2,7 @@ import { render, html } from 'lit-html';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import UserDetails from './pages/UserDetails';
-import './styles/styles.css';
+import './styles.css';
 
 export function navigateTo(path) {
     window.history.pushState({}, path, window.location.origin + path);
@@ -19,13 +19,13 @@ const routes = {
 
 function renderRoute(path) {
     let pageComponent;
-    // Check if it's a user-details page with dynamic ID
+
     const userDetailsMatch = path.match(/^\/user-details\/(\d+)$/);
     if (userDetailsMatch) {
-        const userId = userDetailsMatch[1]; // Extract the user ID from the URL
-        pageComponent = (params) => UserDetails(userId); // Pass the userId to UserDetails
+        const userId = userDetailsMatch[1];
+        pageComponent = (params) => UserDetails(userId);
     } else {
-        pageComponent = routes[path] || routes['/404']; // Default to /404 if route is not found
+        pageComponent = routes[path] || routes['/404'];
     }
 
     render(pageComponent(), document.getElementById('app'));

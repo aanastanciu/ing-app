@@ -19,7 +19,6 @@ const UserDetails = () => {
   const userId = window.location.pathname.split('/').pop();
   const user = getUserById(userId);
   if (!user) {
-    console.log(user)
     return html`<h2>User not found</h2>`;
   }
 
