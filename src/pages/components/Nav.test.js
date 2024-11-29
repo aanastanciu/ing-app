@@ -1,6 +1,6 @@
 import { render } from 'lit-html';
 import '@testing-library/jest-dom';
-import Nav from '../components/Nav';
+import Nav from './Nav';
 import { fireEvent } from '@testing-library/dom';
 
 
@@ -36,8 +36,8 @@ describe('Nav', () => {
 
         render(Nav(), container);
 
-        const homeLink = container.querySelector('a#home-link');
-        const logoutLink = container.querySelector('a#logout-link');
+        const homeLink = container.querySelector('span#home-link');
+        const logoutLink = container.querySelector('span#logout-link');
 
         expect(homeLink).toBeInTheDocument();
         expect(logoutLink).toBeInTheDocument();
