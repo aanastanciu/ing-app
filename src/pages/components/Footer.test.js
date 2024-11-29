@@ -1,6 +1,6 @@
 import { render } from 'lit-html';
 import '@testing-library/jest-dom';
-import Footer from '../components/Footer';
+import Footer from './Footer';
 import { fireEvent } from '@testing-library/dom';
 
 describe('Footer', () => {
